@@ -24,7 +24,7 @@ fn encrypt(plaintext: &str, password: &str) -> Result<String, Box<dyn std::error
 
     // Generate a random 12-byte nonce
     let mut rng = rand::thread_rng();
-    let nonce_bytes: [u8; 12] = rng.r#gen(); // Fix for `gen()` issue
+    let nonce_bytes: [u8; 12] = rng.gen(); // Fixed `gen()` issue
     let nonce = Nonce::from_slice(&nonce_bytes);
 
     let ciphertext = cipher.encrypt(nonce, plaintext.as_bytes())
@@ -101,17 +101,16 @@ fn main() {
                 }
             }
             "2" => {
+                println!("Enter the encrypted text:");
+                let mut encrypted_text = String::new();
+                io::stdin().read_line(&mut encrypted_text).expect("Failed to read input");
+
                 println!("Enter a password:");
                 let password = read_password().expect("Failed to read password");
 
-                match read_from_file("encrypted.txt") {
-                    Ok(encrypted_text) => {
-                        match decrypt(&encrypted_text, &password) {
-                            Ok(decrypted) => println!("Decrypted text: {}", decrypted),
-                            Err(e) => println!("Decryption error: {}", e),
-                        }
-                    }
-                    Err(e) => println!("Failed to read encrypted file: {}", e),
+                match decrypt(encrypted_text.trim(), &password) {
+                    Ok(decrypted) => println!("Decrypted text: {}", decrypted),
+                    Err(e) => println!("Decryption error: {}", e),
                 }
             }
             "3" => break,
@@ -119,4 +118,3 @@ fn main() {
         }
     }
 }
-
