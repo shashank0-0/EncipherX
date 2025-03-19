@@ -1,0 +1,12 @@
+[package]
+name = "text_encryptor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aes-gcm = { version = "0.10", features = ["std"] }
+rand = "0.8"
+rpassword = "7.2"
+base64 = "0.21"
+generic-array = "0.14"
+typenum = "1.18"
