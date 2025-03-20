@@ -25,10 +25,11 @@ Run the following command in the terminal:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 
-### **For Windows:**
-1. Download the Rust Installer:
+For Windows:
 
-   * https://www.rust-lang.org/tools/install *
+1. Download the Rust Installer:
+🔗 Rust Installer
+
 
 2. Run the Installer and choose "Default Installation"
 
@@ -40,7 +41,12 @@ cargo --version
 
 If Rust is installed correctly, these commands will return version numbers.
 
-### **🔹 2. Clone This Repository **
+
+
+
+---
+
+🔹 2. Clone This Repository
 
 Run the following command in your terminal (Linux/macOS) or PowerShell (Windows):
 
@@ -50,7 +56,7 @@ cd text_encryptor
 
 ---
 
-### **🔹 3. Build the Project **
+🔹 3. Build the Project
 
 Run the following command to compile the program:
 
@@ -61,7 +67,7 @@ This creates an optimized executable in target/release/.
 
 ---
 
-### **🔹 4. Run the Program **
+🔹 4. Run the Program
 
 For Linux/macOS:
 
@@ -74,7 +80,7 @@ target\release\text_encryptor.exe
 
 ---
 
-#  🔑 Usage
+🔑 Usage
 
 When you run the program, you'll see a menu like this:
 
@@ -83,7 +89,7 @@ Choose an option:
 2. Decrypt text
 3. Exit
 
-* // Encryption
+Encryption
 
 1. Enter the text to encrypt
 
@@ -102,7 +108,7 @@ Enter a password: ******
 Encrypted text: bXlxzFVsUV... (Base64 output)
 Encrypted data saved to encrypted.txt
 
-* // Decryption
+Decryption
 
 1. Enter the encrypted text manually or from encrypted.txt
 
@@ -122,7 +128,7 @@ Decrypted text: Hello, World!
 
 ---
 
-# 📦 Cross-Compiling for Windows (From Linux)
+📦 Cross-Compiling for Windows (From Linux)
 
 If you want to build a Windows .exe file from Linux, install the Windows target:
 
@@ -142,11 +148,3 @@ This project is MIT Licensed – feel free to use and modify it.
 
 
 ---
-
-⭐ Support
-
-If you found this useful, give it a ⭐ on GitHub!
-For questions, contact me at GitHub Issues.
-
----
-
