@@ -14,11 +14,11 @@ Rust is required to build and run the program. Install it using the steps below:
 For Linux/macOS:
 
 Run the following command in the terminal:
-
-```curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env```
 
-For Windows:
+- For Windows:
 
 1. Download the Rust Installer: [Rust Installer](https://www.rust-lang.org/tools/install)
 
