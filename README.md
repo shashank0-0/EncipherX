@@ -14,13 +14,13 @@ Rust is required to build and run the program. Install it using the steps below:
 For Linux/macOS:
 
 Run the following command in the terminal:
-```sh
+
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source $HOME/.cargo/env```
+source $HOME/.cargo/env
 
-- For Windows:
+For Windows:
 
-1. Download the Rust Installer: [Rust Installer](https://www.rust-lang.org/tools/install)
+1. Download the Rust Installer: Rust Installer
 
 
 2. Run the installer and choose "Default Installation"
@@ -28,12 +28,12 @@ source $HOME/.cargo/env```
 
 3. Restart your terminal and verify installation by running:
 
-```rustc --version
-cargo --version```
+
+
+rustc --version
+cargo --version
 
 If Rust is installed correctly, these commands will return version numbers.
-
-
 
 
 ---
@@ -42,8 +42,8 @@ If Rust is installed correctly, these commands will return version numbers.
 
 Run the following command in your terminal (Linux/macOS) or PowerShell (Windows):
 
-```git clone https://github.com/shashank0-0/text_encryptor.git
-cd text_encryptor```
+git clone https://github.com/shashank0-0/text_encryptor.git
+cd text_encryptor
 
 
 ---
@@ -52,7 +52,7 @@ cd text_encryptor```
 
 Run the following command to compile the program:
 
-```cargo build --release```
+cargo build --release
 
 This creates an optimized executable in target/release/.
 
@@ -63,11 +63,11 @@ This creates an optimized executable in target/release/.
 
 On Linux/macOS:
 
-```./target/release/text_encryptor```
+./target/release/text_encryptor
 
 On Windows:
 
-```.\target\release\text_encryptor.exe```
+.\target\release\text_encryptor.exe
 
 
 ---
@@ -76,7 +76,7 @@ On Windows:
 
 Once the program is running, follow the on-screen prompts:
 
-```1. Encrypt a Message
+1️⃣ Encrypt a Message
 
 Enter your text
 
@@ -85,14 +85,11 @@ The program will generate an encrypted message
 The output will be saved in encrypted.txt
 
 
-
-2. Decrypt a Message
+2️⃣ Decrypt a Message
 
 Enter the previously encrypted text
 
-The original message will be displayed```
-
-
+The original message will be displayed
 
 
 
