@@ -1,44 +1,35 @@
+🔐 Text Encryptor
 
-# 🔐 Rust Text Encryptor
+A simple and efficient text encryption and decryption tool written in Rust. Supports Windows, Linux, and macOS.
 
-A **cross-platform text encryptor** built with **Rust and AES-GCM encryption**.  
-Supports **Linux, Windows, and macOS**. Encrypt and decrypt text securely using a password.
-
----
-
-## 🚀 Features
-- ✅ AES-256-GCM encryption for **secure text encryption**  
-- ✅ Password-based encryption & decryption  
-- ✅ Saves encrypted text to a file (`encrypted.txt`)  
-- ✅ **Cross-platform support** (Linux, Windows, macOS)  
-- ✅ **Cross-compilation** (Build Windows `.exe` on Linux)  
 
 ---
 
-## 🛠️ Installation & Setup (Windows, Linux, macOS)
+⚡ Installation & Setup (Windows, Linux, macOS)
 
-### **1️⃣ Install Rust (Required for All OS)**  
+1️⃣ Install Rust (Required for All OS)
+
 Rust is required to build and run the program. Install it using the steps below:
 
-#### **For Linux/macOS:**
+For Linux/macOS:
+
 Run the following command in the terminal:
-```sh
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source $HOME/.cargo/env
+
+```curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env```
 
 For Windows:
 
-1. Download the Rust Installer
+1. Download the Rust Installer: [Rust Installer](https://www.rust-lang.org/tools/install)
 
-  * [Download Rust Installer](https://www.rust-lang.org/tools/install)
 
-2. Run the Installer and choose "Default Installation"
+2. Run the installer and choose "Default Installation"
 
 
 3. Restart your terminal and verify installation by running:
 
-rustc --version
-cargo --version
+```rustc --version
+cargo --version```
 
 If Rust is installed correctly, these commands will return version numbers.
 
@@ -51,8 +42,8 @@ If Rust is installed correctly, these commands will return version numbers.
 
 Run the following command in your terminal (Linux/macOS) or PowerShell (Windows):
 
-git clone https://github.com/shashank0-0/text_encryptor.git
-cd text_encryptor
+```git clone https://github.com/shashank0-0/text_encryptor.git
+cd text_encryptor```
 
 
 ---
@@ -61,9 +52,63 @@ cd text_encryptor
 
 Run the following command to compile the program:
 
-cargo build --release
+```cargo build --release```
 
 This creates an optimized executable in target/release/.
 
 
 ---
+
+4️⃣ Run the Program
+
+On Linux/macOS:
+
+```./target/release/text_encryptor```
+
+On Windows:
+
+```.\target\release\text_encryptor.exe```
+
+
+---
+
+📜 Usage
+
+Once the program is running, follow the on-screen prompts:
+
+```1. Encrypt a Message
+
+Enter your text
+
+The program will generate an encrypted message
+
+The output will be saved in encrypted.txt
+
+
+
+2. Decrypt a Message
+
+Enter the previously encrypted text
+
+The original message will be displayed```
+
+
+
+
+
+---
+
+🚀 Contributing
+
+Feel free to fork the repository and submit a pull request if you'd like to improve the project.
+
+
+---
+
+📜 License
+
+This project is licensed under the MIT License.
+
+
+---
+
