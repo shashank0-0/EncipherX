@@ -68,7 +68,7 @@ This creates an optimized executable in `target/release/`.
 #### On Windows:
 
 ```sh
-.	argetelease	ext_encryptor.exe
+./target/release/text_encryptor.exe
 ```
 
 ---
