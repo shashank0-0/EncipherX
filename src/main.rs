@@ -5,8 +5,33 @@ use base64::{engine::general_purpose, Engine};
 use rpassword::read_password;
 use std::fs::{File, OpenOptions};
 use std::io::{self, Write, Read};
+use std::path::PathBuf;
 use generic_array::GenericArray;
 use typenum::U32;
+
+/// Get the correct file path based on the OS
+fn get_encrypted_file_path() -> PathBuf {
+    let mut path = std::env::current_dir().expect("Failed to get current directory");
+    path.push("encrypted.txt"); // Works on both Windows and Linux
+    path
+}
+
+/// Save encrypted text to a file
+fn save_to_file(data: &str) -> io::Result<()> {
+    let path = get_encrypted_file_path();
+    let mut file = File::create(path)?;
+    file.write_all(data.as_bytes())?;
+    Ok(())
+}
+
+/// Read encrypted text from a file
+fn read_from_file() -> io::Result<String> {
+    let path = get_encrypted_file_path();
+    let mut file = OpenOptions::new().read(true).open(path)?;
+    let mut contents = String::new();
+    file.read_to_string(&mut contents)?;
+    Ok(contents)
+}
 
 /// Generate a 32-byte encryption key from a user-provided password
 fn derive_key(password: &str) -> GenericArray<u8, U32> {
@@ -57,21 +82,6 @@ fn decrypt(encrypted_text: &str, password: &str) -> Result<String, Box<dyn std::
     Ok(String::from_utf8(decrypted_bytes)?)
 }
 
-/// Save encrypted text to a file
-fn save_to_file(filename: &str, data: &str) -> io::Result<()> {
-    let mut file = File::create(filename)?;
-    file.write_all(data.as_bytes())?;
-    Ok(())
-}
-
-/// Read encrypted text from a file
-fn read_from_file(filename: &str) -> io::Result<String> {
-    let mut file = OpenOptions::new().read(true).open(filename)?;
-    let mut contents = String::new();
-    file.read_to_string(&mut contents)?;
-    Ok(contents)
-}
-
 fn main() {
     loop {
         println!("Choose an option:");
@@ -89,12 +99,12 @@ fn main() {
                 io::stdin().read_line(&mut plaintext).expect("Failed to read input");
 
                 println!("Enter a password:");
-                let password = read_password().expect("Failed to read password");
+                let password = read_password().expect("Failed to read password").trim().to_string();
 
                 match encrypt(plaintext.trim(), &password) {
                     Ok(encrypted) => {
                         println!("Encrypted text: {}", encrypted);
-                        save_to_file("encrypted.txt", &encrypted).expect("Failed to save file");
+                        save_to_file(&encrypted).expect("Failed to save file");
                         println!("Encrypted data saved to encrypted.txt");
                     }
                     Err(e) => println!("Encryption error: {}", e),
@@ -106,7 +116,7 @@ fn main() {
                 io::stdin().read_line(&mut encrypted_text).expect("Failed to read input");
 
                 println!("Enter a password:");
-                let password = read_password().expect("Failed to read password");
+                let password = read_password().expect("Failed to read password").trim().to_string();
 
                 match decrypt(encrypted_text.trim(), &password) {
                     Ok(decrypted) => println!("Decrypted text: {}", decrypted),
