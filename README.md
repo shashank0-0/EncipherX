@@ -1,6 +1,6 @@
-# 🔐 Text Encryptor
+# 🔐 EncipherX
 
-A simple and efficient text encryption and decryption tool written in Rust. Supports Windows, Linux, and macOS.
+A simple and efficient text encryption and decryption tool written in Rust. Supports Windows, Linux and macOS.
 
 ---
 
@@ -39,8 +39,8 @@ If Rust is installed correctly, these commands will return version numbers.
 Run the following command in your terminal (Linux/macOS) or PowerShell (Windows):
 
 ```sh
-git clone https://github.com/shashank0-0/text_encryptor.git
-cd text_encryptor
+git clone https://github.com/shashank0-0/EncipherX.git
+cd EncipherX
 ```
 
 ---
@@ -62,13 +62,13 @@ This creates an optimized executable in `target/release/`.
 #### On Linux/macOS:
 
 ```sh
-./target/release/text_encryptor
+./target/release/EncipherX
 ```
 
 #### On Windows:
 
 ```sh
-./target/release/text_encryptor.exe
+./target/release/EncipherX.exe
 ```
 
 ---

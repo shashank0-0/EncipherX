@@ -1,7 +1,9 @@
 [package]
-name = "text_encryptor"
+name = "encipherx"
 version = "0.1.0"
 edition = "2021"
+author = ["Shashank"]
+description = "EncipherX - Secure Text Encryption CLI App"
 
 [dependencies]
 aes-gcm = { version = "0.10", features = ["std"] }
@@ -10,3 +12,4 @@ rpassword = "7.2"
 base64 = "0.21"
 generic-array = "0.14"
 typenum = "1.18"
+clap = { version = "4.4", features = ["derive"] }
