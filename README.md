@@ -19,21 +19,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 ```
 
-#### For Windows:
-
-### 🪟 Windows Installation (Using Prebuilt Executable)
-
-1️⃣ Go to the [Releases](https://github.com/shashank0-0/EncipherX/releases) section of this repository.
-
-2️⃣ Download the latest `EncipherX.exe` file from the assets.
-
-3️⃣ Place the file in any directory you prefer (e.g., `C:\EncipherX\`).
-
-4️⃣ Open Command Prompt (cmd) or PowerShell and navigate to the directory:
-
-```powershell
-cd C:\EncipherX\
-```
 ---
 
 ### 2️⃣ Clone This Repository
@@ -67,6 +52,23 @@ This creates an optimized executable in `target/release/`.
 ./target/release/EncipherX
 ```
 
+---
+
+#### For Windows:
+
+### 🪟 Windows Installation (Using Prebuilt Executable)
+
+1️⃣ Go to the [Releases](https://github.com/shashank0-0/EncipherX/releases) section of this repository.
+
+2️⃣ Download the latest `EncipherX.exe` file from the assets.
+
+3️⃣ Place the file in any directory you prefer (e.g., `C:\EncipherX\`).
+
+4️⃣ Open Command Prompt (cmd) or PowerShell and navigate to the directory:
+
+```powershell
+cd C:\EncipherX\
+```
 ---
 
 ## 📜 Usage
