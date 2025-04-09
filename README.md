@@ -1,4 +1,4 @@
-# 🔐 EncipherX
+###🔐 EncipherX
 
 A simple and efficient text encryption and decryption tool written in Rust. Supports Windows, Linux and macOS.
 
@@ -21,17 +21,19 @@ source $HOME/.cargo/env
 
 #### For Windows:
 
-1. Download the Rust Installer: [Rust Installer](https://www.rust-lang.org/tools/install)  
-2. Run the installer and choose **"Default Installation"**  
-3. Restart your terminal and verify installation by running:
+### 🪟 Windows Installation (Using Prebuilt Executable)
 
-```sh
-rustc --version
-cargo --version
+1️⃣ Go to the [Releases](https://github.com/shashank0-0/EncipherX/releases) section of this repository.
+
+2️⃣ Download the latest `EncipherX.exe` file from the assets.
+
+3️⃣ Place the file in any directory you prefer (e.g., `C:\EncipherX\`).
+
+4️⃣ Open Command Prompt (cmd) or PowerShell and navigate to the directory:
+
+```powershell
+cd C:\EncipherX\
 ```
-
-If Rust is installed correctly, these commands will return version numbers.
-
 ---
 
 ### 2️⃣ Clone This Repository
@@ -63,12 +65,6 @@ This creates an optimized executable in `target/release/`.
 
 ```sh
 ./target/release/EncipherX
-```
-
-#### On Windows:
-
-```sh
-./target/release/EncipherX.exe
 ```
 
 ---
