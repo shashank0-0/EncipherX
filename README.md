@@ -1,4 +1,4 @@
-###🔐 EncipherX
+### 🔐 EncipherX
 
 A simple and efficient text encryption and decryption tool written in Rust. Supports Windows, Linux and macOS.
 
